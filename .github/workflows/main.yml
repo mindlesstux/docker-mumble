@@ -1,10 +1,17 @@
 name: Build Push Image
-on: [push]
+on: 
+  workflow_dispatch:
+    inputs:
+      mumble-version:
+        description: 'Mumble release version:'     
+        required: true
+      tags:
+        description: 'Test scenario tags'  
 
 jobs:
-  hello_world:
+  docker-mumble-server:
     runs-on: ubuntu-latest
-    name: A job to build a dummy docker container
+    name: A job to build a mumble server docker container
     steps:
       - name: Check out the repo
         uses: actions/checkout@v2
