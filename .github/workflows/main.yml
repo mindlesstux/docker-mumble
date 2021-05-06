@@ -2,7 +2,7 @@ name: Build Push Image
 on: 
   workflow_dispatch:
     inputs:
-      mumble-version:
+      murmur-release:
         description: 'Mumble release version:'     
         required: true
       tags:
