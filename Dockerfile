@@ -13,7 +13,7 @@ COPY entrypoint.sh /entrypoint.sh
 WORKDIR /murmur
 
 # Get the murmer static tar.bz2
-ADD https://github.com/mumble-voip/mumble/releases/download/${murmur-release}/murmur-static_x86-${murmur-release}.tar.bz2
+ADD https://github.com/mumble-voip/mumble/releases/download/${murmur-release}/murmur-static_x86-${murmur-release}.tar.bz2 /murmur
 RUN tar -xjf /usr/src/things/murmur-static_x86-${murmur-release}.tar.bz2
 
 # CHMOD the entrypoint.sh
